@@ -1,0 +1,7 @@
+# Only installed in a private venv; never into the QGIS process.
+copernicusmarine==2.4.0
+numpy>=2.1,<3
+xarray>=2024.10,<2027
+netCDF4>=1.7,<2
+rasterio>=1.4.3,<2
+packaging>=24

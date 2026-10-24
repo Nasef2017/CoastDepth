@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the software version and the separate Copernicus Marine product DOI."
+title: "CoastDepth"
+authors:
+  - name: "Mohamed Aly Nasef"
+type: software
+version: 0.2.5
+date-released: 2026-10-24
+license: Apache-2.0
+abstract: "Standalone QGIS plugin for Copernicus Marine coastal SDB subset retrieval and export. Developed by Mohamed Aly Nasef; documentation and vibe coding by ChatGPT."
