@@ -9,12 +9,16 @@ class ProviderError(Exception):
 
 def classify(exc):
     # Messages are examined locally for status classification, never exported.
+    context = getattr(exc, "__context__", None) or getattr(exc, "__cause__", None)
+    response = getattr(exc, "response", None) or getattr(context, "response", None)
+    status = getattr(response, "status_code", None)
     name = type(exc).__name__.lower()
-    status = getattr(getattr(exc, "response", None), "status_code", None)
+    if status in (400, 401, 403):
+        return "AUTH"
+    if any(v in name for v in ("credential", "unauthorized", "invalidusernameorpassword")):
+        return "AUTH"
     if "couldnotconnecttoauthentication" in name:
         return "NETWORK"
-    if status in (401, 403) or any(v in name for v in ("credential", "authentication", "unauthorized", "invalidusernameorpassword")):
-        return "AUTH"
     if any(v in name for v in ("datasetnotfound", "datasetversionnotfound", "variablenotfound", "variablesnotfound")):
         return "SCHEMA"
     if status in (408, 429, 500, 502, 503, 504) or any(v in name for v in ("timeout", "connection", "serverdisconnected")):

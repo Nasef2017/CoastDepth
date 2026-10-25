@@ -6,7 +6,7 @@ import json
 import logging
 import os
 from pathlib import Path, PurePosixPath, PureWindowsPath
-import subprocess
+import subprocess  # nosec B404
 import sys
 import venv
 try:
@@ -106,7 +106,7 @@ def setup(root):
     stages = (["--upgrade", "pip>=26.2.2"],
               ["-r", str(Path(__file__).with_name("requirements-worker.txt"))])
     for requirements in stages:
-        subprocess.run([str(environment_python(root)), "-m", "pip", "--isolated", "install",
+        subprocess.run([str(environment_python(root)), "-m", "pip", "--isolated", "install",  # nosec B603
             "--disable-pip-version-check", "--only-binary=:all:", "--index-url", "https://pypi.org/simple",
             "--retries", "1", "--timeout", "30", *requirements],
             stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True,

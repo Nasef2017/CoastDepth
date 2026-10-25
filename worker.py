@@ -8,13 +8,26 @@ import shutil
 import sys
 import uuid
 
-# Executed by absolute filename; only our own package directory is added.
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+# Executed by absolute filename; ensure the package directory and DLLs are configured.
+package_dir = Path(__file__).resolve().parent
+plugins_dir = package_dir.parent
+if str(plugins_dir) not in sys.path:
+    sys.path.insert(0, str(plugins_dir))
+
+if "coastdepth" not in sys.modules:
+    try:
+        import coastdepth
+    except ModuleNotFoundError:
+        import importlib
+        sys.modules["coastdepth"] = importlib.import_module(package_dir.name)
+
+from coastdepth.runtime_paths import configure_runtime_dlls
+configure_runtime_dlls()
+
 from coastdepth.core.catalogue import DATASETS, DATASET_FOLDERS, DOI, select_variables
 from coastdepth.core.events import event
 from coastdepth.core.models import Bounds
 from coastdepth.core.provider import MarineProvider, ProviderError
-from coastdepth.runtime_paths import configure_runtime_dlls
 
 PROTOCOL = sys.stdout
 

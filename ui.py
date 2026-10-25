@@ -37,7 +37,13 @@ def env_root():
     return root / "coastdepth" / "worker-v1"
 
 def worker_python():
-    return str(environment_python(env_root()))
+    env_py = environment_python(env_root())
+    if env_py.is_file():
+        return str(env_py)
+    base_py = default_python()
+    if base_py and Path(base_py).is_file():
+        return str(base_py)
+    return str(sys.executable)
 
 def clean_environment():
     environment = QProcessEnvironment.systemEnvironment()

@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import queue
 import shutil
-import subprocess
+import subprocess  # nosec B404
 import threading
 import time
 import uuid
@@ -39,7 +39,7 @@ def execute_worker(python, worker, request, credentials, feedback, timeout_minut
     deadline = time.monotonic() + timeout_minutes * 60
     try:
         flags = subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0
-        proc = subprocess.Popen([str(python), str(worker)], stdin=subprocess.PIPE,
+        proc = subprocess.Popen([str(python), str(worker)], stdin=subprocess.PIPE,  # nosec B603
             stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, env=worker_environment(), creationflags=flags)
         def read_lines():
             try:
