@@ -38,7 +38,7 @@ def short_help(keys, settings=False):
         "<h3>Attribution and licence</h3><p>Generated using E.U. Copernicus Marine Service Information; "
         "<a href=\"" + DOI + "\">" + DOI + "</a>.</p>"
         "<p>Data retain the <a href=\"" + LICENCE + "\">Copernicus Marine licence</a>; "
-        "the plugin's Apache-2.0 licence does not replace the data terms. "
+        "the plugin's GPL licence does not replace the data terms. "
         "See the <a href=\"" + PRODUCT_URL + "/services\">official product/access page</a>, "
         "<a href=\"" + PUM + "\">Product User Manual</a>, and "
         "<a href=\"https://help.marine.copernicus.eu/en/articles/4444611-citing-copernicus-marine-products-and-services\">official citation guidance</a>.</p>"

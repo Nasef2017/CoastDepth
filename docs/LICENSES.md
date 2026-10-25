@@ -2,11 +2,11 @@
 
 ## Plugin code
 
-CoastDepth source, documentation, original icon and workflow artwork are distributed under **Apache-2.0**. See LICENSE. No Bathymetrix-AI source, images, code or modules are imported or bundled. The workflow is independently implemented for this project. No Copernicus or QGIS logos are reproduced as the plugin icon.
+CoastDepth source, documentation, original icon and workflow artwork are distributed under **GPL-3.0-or-later**. See LICENSE and complete COPYING. No Bathymetrix-AI source, images, code or modules are imported or bundled. The workflow is independently implemented for this project. No Copernicus or QGIS logos are reproduced as the plugin icon.
 
 ## Marine data
 
-Downloaded data retain the **Copernicus Marine Service licence**. The authoritative [English agreement](https://marine.copernicus.eu/user-corner/service-commitments-and-licence) is linked from the product page and was checked on 24 October 2026. Its permissions include reuse, modification and redistribution subject to its terms. Credit with the product DOI, preserve traceability, and propagate applicable obligations when redistributing. Do not represent the data licence as the plugin software licence or invent a CC BY identifier. The plugin records the live source's licence attributes when supplied and the agreement reference separately.
+Downloaded data retain the **Copernicus Marine Service licence**. The authoritative [English agreement](https://marine.copernicus.eu/user-corner/service-commitments-and-licence) is linked from the product page and was checked on 24 October 2026. Its permissions include reuse, modification and redistribution subject to its terms. Credit with the product DOI, preserve traceability, and propagate applicable obligations when redistributing. Do not represent the data licence as the GPL or invent a CC BY identifier. The plugin records the live source's licence attributes when supplied and the agreement reference separately.
 
 The producer explicitly excludes navigation use. [Product information](https://data.marine.copernicus.eu/product/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/description) and [PUM](https://documentation.marine.copernicus.eu/PUM/CMEMS-GLO-PUM-SDB-016-001.pdf) provide scientific limitations. The software does not improve or independently validate the producer's scientific estimates.
 
@@ -26,4 +26,4 @@ Third-party libraries are installed externally in the user's private environment
 | packaging | Apache-2.0 OR BSD-2-Clause; https://github.com/pypa/packaging/blob/main/LICENSE |
 | QGIS/PyQGIS and PyQt | Supplied and licensed by the QGIS distribution; not redistributed here |
 
-The plugin is developed and maintained by Mohamed Aly Nasef (https://github.com/Nasef2017/CoastDepth).
+The software citation names contributors generically until the user supplies actual authorship/maintainer details. No trademark clearance or public repository registration is claimed.

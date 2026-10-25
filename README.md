@@ -50,7 +50,7 @@ All three datasets share the parent product DOI. No separate dataset DOIs have b
 
 **Attribution for processed outputs:** Generated using E.U. Copernicus Marine Service Information; https://doi.org/10.48670/mds-00364.
 
-Follow the [official citation guidance](https://help.marine.copernicus.eu/en/articles/4444611-citing-copernicus-marine-products-and-services) and [data licence](https://marine.copernicus.eu/user-corner/service-commitments-and-licence). The plugin's **Apache-2.0** software licence is separate from the Copernicus Marine data licence.
+Follow the [official citation guidance](https://help.marine.copernicus.eu/en/articles/4444611-citing-copernicus-marine-products-and-services) and [data licence](https://marine.copernicus.eu/user-corner/service-commitments-and-licence). The plugin's **GPL-3.0-or-later** software licence is separate from the Copernicus Marine data licence.
 
 ## Outputs and limitations
 
@@ -73,4 +73,4 @@ When reporting a problem, include the plugin version, QGIS version, operating sy
 
 ## Licence
 
-The software is distributed under **Apache-2.0**. Copernicus Marine data retain their own licence and attribution requirements. See [LICENSE](LICENSE) and [third-party licences](docs/LICENSES.md).
+The software is distributed under **GPL-3.0-or-later**. Copernicus Marine data retain their own licence and attribution requirements. See [LICENSE](LICENSE), [COPYING](COPYING) and [third-party licences](docs/LICENSES.md).

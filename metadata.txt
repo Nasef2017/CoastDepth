@@ -11,7 +11,6 @@ homepage=https://github.com/Nasef2017/CoastDepth#readme
 repository=https://github.com/Nasef2017/CoastDepth
 tracker=https://github.com/Nasef2017/CoastDepth/issues
 category=Raster
-license=Apache-2.0
 tags=raster, bathymetry, copernicus, marine, remote sensing, oceanography, sdb
 icon=icon.svg
 experimental=False

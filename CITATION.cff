@@ -6,5 +6,5 @@ authors:
 type: software
 version: 0.2.5
 date-released: 2026-10-24
-license: Apache-2.0
+license: GPL-3.0-or-later
 abstract: "Standalone QGIS plugin for Copernicus Marine coastal SDB subset retrieval and export. Developed by Mohamed Aly Nasef; documentation and vibe coding by ChatGPT."
