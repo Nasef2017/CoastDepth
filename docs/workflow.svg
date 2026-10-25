@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1670" viewBox="0 0 1500 1670">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#527486"/></marker></defs>
+<rect width="1500" height="1670" fill="#f1f6f8"/>
+<rect width="1500" height="135" fill="#09394b"/>
+<text x="62" y="68" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="43" font-weight="700">CoastDepth — Copernicus Marine SDB</text>
+<text x="65" y="108" fill="#99e7df" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="400">QGIS Processing Toolbox  |  Independent tool, Copernicus Marine data  |  v0.2.5</text>
+<text x="70" y="174" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="700">REQUEST AND PROCESSING</text>
+<text x="1030" y="174" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="700">CONTROL AND SAFETY</text>
+<rect x="70" y="198" width="870" height="96" rx="16" fill="#e6f8f4" stroke="#c4d8e0" stroke-width="2"/>
+<text x="94" y="237" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">01  Prepare runtime</text>
+<text x="94" y="268" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Check libraries in a private Python environment.</text>
+<polyline points="505,294 505,324" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="324" width="870" height="96" rx="16" fill="#ffffff" stroke="#c4d8e0" stroke-width="2"/>
+<text x="94" y="363" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">02  Define ROI</text>
+<text x="94" y="394" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Polygon / layer extent; optional Selected Features.</text>
+<polyline points="505,420 505,450" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="450" width="870" height="96" rx="16" fill="#ffffff" stroke="#c4d8e0" stroke-width="2"/>
+<text x="94" y="489" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">03  Validate geography</text>
+<text x="94" y="520" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Snapshot geometry, transform to EPSG:4326, check bounds.</text>
+<polyline points="505,546 505,576" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="576" width="870" height="96" rx="16" fill="#ffffff" stroke="#c4d8e0" stroke-width="2"/>
+<text x="94" y="615" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">04  Verify credentials</text>
+<text x="94" y="646" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Official verification; encrypted QGIS storage is optional.</text>
+<polyline points="505,672 505,702" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="702" width="870" height="96" rx="16" fill="#ffffff" stroke="#c4d8e0" stroke-width="2"/>
+<text x="94" y="741" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">05  Discover live metadata</text>
+<text x="94" y="772" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Validate dataset IDs, version, service and variable names.</text>
+<polyline points="505,798 505,828" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="828" width="870" height="96" rx="16" fill="#ffffff" stroke="#c4d8e0" stroke-width="2"/>
+<text x="94" y="867" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">06  Download official subset</text>
+<text x="94" y="898" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Spatial bounds; bathymetry, quality and available method.</text>
+<polyline points="505,924 505,954" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="954" width="870" height="96" rx="16" fill="#ffffff" stroke="#c4d8e0" stroke-width="2"/>
+<text x="94" y="993" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">07  Validate and mask</text>
+<text x="94" y="1024" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Read actual grid; preserve polygon holes and nodata.</text>
+<polyline points="505,1050 505,1080" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="1080" width="870" height="96" rx="16" fill="#ffffff" stroke="#c4d8e0" stroke-width="2"/>
+<text x="94" y="1119" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">08  Export + document</text>
+<text x="94" y="1150" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">NetCDF / GeoTIFF, actual provenance and SHA-256.</text>
+<polyline points="505,1176 505,1206" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="1206" width="870" height="96" rx="16" fill="#ffffff" stroke="#c4d8e0" stroke-width="2"/>
+<text x="94" y="1245" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">09  Complete all methods</text>
+<text x="94" y="1276" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Repeat processing for each requested dataset.</text>
+<polyline points="505,1302 505,1332" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="1332" width="870" height="96" rx="16" fill="#e6f8f4" stroke="#c4d8e0" stroke-width="2"/>
+<text x="94" y="1371" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">10  Publish + load</text>
+<text x="94" y="1402" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Atomic run folder; add results to QGIS; save safe JSONL.</text>
+<rect x="1010" y="198" width="420" height="162" rx="16" fill="#ffffff" stroke="#c4d8e0" stroke-width="2"/>
+<text x="1034" y="237" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">Missing dependencies</text>
+<text x="1034" y="268" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">ERROR lists missing libraries.</text>
+<text x="1034" y="296" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Copy pip commands to OSGeo4W</text>
+<text x="1034" y="324" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Shell, install, then Recheck.</text>
+<polyline points="940,246 1010,246" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1010" y="576" width="420" height="162" rx="16" fill="#ffffff" stroke="#c4d8e0" stroke-width="2"/>
+<text x="1034" y="615" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">Account required</text>
+<text x="1034" y="646" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Login dialog when needed.</text>
+<text x="1034" y="674" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">No passwords in arguments,</text>
+<text x="1034" y="702" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">logs, requests or provenance.</text>
+<polyline points="940,624 1010,624" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1010" y="850" width="420" height="190" rx="16" fill="#ffffff" stroke="#c4d8e0" stroke-width="2"/>
+<text x="1034" y="889" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">Retry / Cancel / Timeout</text>
+<text x="1034" y="920" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Retry transient service failures.</text>
+<text x="1034" y="948" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Cancel stops the worker process.</text>
+<text x="1034" y="976" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Failure removes run staging;</text>
+<text x="1034" y="1004" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">prior completed data stay intact.</text>
+<polyline points="940,876 1010,876" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1010" y="1120" width="420" height="190" rx="16" fill="#ffffff" stroke="#c4d8e0" stroke-width="2"/>
+<text x="1034" y="1159" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">Evidence over assumptions</text>
+<text x="1034" y="1190" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Keep original signs and flags.</text>
+<text x="1034" y="1218" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Missing image dates stay null.</text>
+<text x="1034" y="1246" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Documented image periods are</text>
+<text x="1034" y="1274" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">separate from file evidence.</text>
+<polyline points="940,1128 975,1128 975,1174 1010,1174" fill="none" stroke="#527486" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="70" y="1524" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">Optical RTE  /  Wave Kinematics  /  Intertidal</text>
+<text x="70" y="1558" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001  |  doi.org/10.48670/mds-00364</text>
+<text x="70" y="1592" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Static coastal estimates. Preserve source values. Data are not for navigation.</text>
+<text x="70" y="1630" fill="#163f50" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400">Public release: see TESTING.md for executed checks and QGIS acceptance tests.</text>
+</svg>

@@ -1,0 +1,25 @@
+{"qgis_version": "4.0.2-Norrk\u00f6ping", "profile": "C:\\Users\\Nasef\\Documents\\Codex\\2026-10-24\\referenced-chatgpt-conversation-this-is-an\\work\\qgis4-test-profile"}
+test_combined_formats_do_not_duplicate_height (__main__.QgisSmokeTests.test_combined_formats_do_not_duplicate_height) ... E:\Programs Files\QGIS 4.0\apps\Python312\Lib\site-packages\osgeo\gdal.py:606: FutureWarning: Neither gdal.UseExceptions() nor gdal.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.
+  warnings.warn(
+ok
+test_copy_missing_library_commands (__main__.QgisSmokeTests.test_copy_missing_library_commands) ... ok
+test_dependency_dialog_missing_runtime (__main__.QgisSmokeTests.test_dependency_dialog_missing_runtime) ... ok
+test_each_native_tool_help_has_correct_id_and_common_doi (__main__.QgisSmokeTests.test_each_native_tool_help_has_correct_id_and_common_doi) ... ok
+test_legacy_elevation_and_short_folders_have_readable_names (__main__.QgisSmokeTests.test_legacy_elevation_and_short_folders_have_readable_names) ... ok
+test_login_dialog_password_and_exec (__main__.QgisSmokeTests.test_login_dialog_password_and_exec) ... ok
+test_only_height_geotiff_layers_and_readable_names (__main__.QgisSmokeTests.test_only_height_geotiff_layers_and_readable_names) ... ok
+test_only_height_netcdf_layers_and_readable_names (__main__.QgisSmokeTests.test_only_height_netcdf_layers_and_readable_names) ... ok
+test_plugin_manager_version_acceptance (__main__.QgisSmokeTests.test_plugin_manager_version_acceptance) ... ok
+test_polygon_hole_snapshot (__main__.QgisSmokeTests.test_polygon_hole_snapshot) ... ok
+test_processing_download_prepare_execute_and_height_postprocess (__main__.QgisSmokeTests.test_processing_download_prepare_execute_and_height_postprocess) ... ok
+test_processing_temporary_output_folder_is_resolved (__main__.QgisSmokeTests.test_processing_temporary_output_folder_is_resolved) ... ok
+test_provider_lifecycle_and_native_processing_dialog (__main__.QgisSmokeTests.test_provider_lifecycle_and_native_processing_dialog) ... ok
+test_qprocess_scoped_error_enum (__main__.QgisSmokeTests.test_qprocess_scoped_error_enum) ... ok
+test_ready_startup_stays_quiet_and_unblocks_open (__main__.QgisSmokeTests.test_ready_startup_stays_quiet_and_unblocks_open) ... ok
+test_selection_and_extent (__main__.QgisSmokeTests.test_selection_and_extent) ... ok
+test_startup_dependency_gate_blocks_main_dialog (__main__.QgisSmokeTests.test_startup_dependency_gate_blocks_main_dialog) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 3.668s
+
+OK

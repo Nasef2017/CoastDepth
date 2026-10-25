@@ -1,0 +1,27 @@
+flowchart TD
+    A[Open CoastDepth in Processing Toolbox] --> B{Private dependencies ready?}
+    B -- No --> C[Show ERROR with missing names and copy pip commands for OSGeo4W Shell]
+    C --> B
+    B -- Yes --> D[Choose datasets and polygon or layer extent]
+    D --> E[Snapshot selected features and transform ROI to EPSG:4326]
+    E --> F{Valid bounded ROI?}
+    F -- No --> D
+    F -- Yes --> G{Credentials available?}
+    G -- No --> H[Login dialog and optional encrypted QGIS storage]
+    H --> I[Verify using official Toolbox]
+    G -- Yes --> I
+    I -- Invalid --> H
+    I -- Valid --> J[Discover live dataset version and variable names]
+    J --> K[Subset height and quality plus method when available]
+    K --> L[Validate actual grid and source metadata]
+    L --> M[Local polygon mask preserving holes and nodata]
+    M --> N[NetCDF and or GeoTIFF with provenance and checksums]
+    N --> O{All datasets succeeded?}
+    O -- More datasets --> J
+    O -- Yes --> P[Publish completed run folder atomically]
+    P --> Q[Add results to QGIS and save safe JSONL log]
+    K -. Transient service failure .-> R[Bounded retry and backoff]
+    R --> K
+    K -. Cancel or timeout .-> S[Stop worker and remove only run staging]
+    L -. Failure .-> S
+    S --> T[Safe failure log and manual Retry]

@@ -1,0 +1,1005 @@
+{
+  "products": [
+    {
+      "title": "Global coastal satellite derived bathymetry static",
+      "product_id": "BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001",
+      "thumbnail_url": "https://mdl-metadata.s3.waw3-1.cloudferro.com/metadata/thumbnails/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001.jpg",
+      "description": "**DEFINITION**\n\nImportant note to users:  These data are not to be used for navigation. The data is 100 m resolution and as high quality as possible. It has been produced with state-of-the-art technology and validated to the best of the producer’s ability and where sufficient high-quality data were available. These data could be useful for planning and modelling purposes. The user should independently assess the adequacy of any material, data and/or information of the product before relying upon it. Neither Mercator Ocean International/Copernicus Marine Service nor the data originators are liable for any negative consequences following direct or indirect use of the product information, services, data products and/or data.\n\nProduct overview: This is a satellite derived bathymetry product covering the global coastal area (where data retrieval is possible), with 100 m resolution, based on Sentinel-2. This global coastal product has been developed based on 3 methodologies: Intertidal Satellite-Derived Bathymetry; Physics-based optical Satellite-Derived Bathymetry from RTE inversion; and Wave Kinematics Satellite-Derived Bathymetry from wave dispersion.\n\nThere is one dataset for each of the methods (including a quality index based on uncertainty) and an additional one where the three datasets were merged (also includes a quality index). Using their expertise and special techniques the consortium tried to achieve an optimal balance between coverage and data quality.",
+      "digital_object_identifier": "10.48670/mds-00364",
+      "sources": [
+        "Satellite observations"
+      ],
+      "processing_level": "Level 4",
+      "production_center": "EOMAP (Germany) - Deltares (The Netherlands) - GGS (The Netherlands)",
+      "keywords": [
+        "oceanographic-geographical-features",
+        "satellite-observation",
+        "water-depth-quality-indicator-phy-comp",
+        "water-depth-quality-indicator-phy-irte",
+        "water-depth-phy-comp",
+        "water-depth-quality-indicator-phy-wk",
+        "water-depth-phy-it",
+        "water-depth-phy-irte",
+        "water-depth-quality-indicator-phy-it",
+        "water-depth-phy-wk",
+        "multi-year",
+        "weather-climate-and-seasonal-forecasting",
+        "coastal-marine-environment",
+        "marine-safety",
+        "marine-resources",
+        "global-ocean",
+        "level-4"
+      ],
+      "datasets": [
+        {
+          "dataset_id": "cmems_obs-sdb_glo_phy_comp_my_100m-l4-s2_static",
+          "dataset_name": "Provision of global coastal bathymetry derived from Sentinel 2 observations",
+          "product_id": "BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001",
+          "digital_object_identifier": "10.48670/mds-00364",
+          "versions": [
+            {
+              "label": "202511",
+              "parts": [
+                {
+                  "name": "default",
+                  "services": [
+                    {
+                      "service_name": "original-files",
+                      "service_short_name": "files",
+                      "service_format": null,
+                      "uri": "https://s3.waw3-1.cloudferro.com/mdl-native-17/native/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_comp_my_100m-l4-s2_static_202511/cmems_obs-sdb_glo_phy-comp_my-oa-100m-l4-s2_static.nc",
+                      "variables": [
+                        {
+                          "short_name": "Quality_indicator",
+                          "standard_name": "quality_flag",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "SDB_type",
+                          "standard_name": "SDB_methodology",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "height",
+                          "standard_name": "height",
+                          "units": "m",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        }
+                      ],
+                      "platforms_metadata": null,
+                      "arco_sparse_type": null
+                    },
+                    {
+                      "service_name": "static-arco",
+                      "service_short_name": "static-arco",
+                      "service_format": "zarr",
+                      "uri": "https://s3.waw3-1.cloudferro.com/mdl-arco-time-003/arco/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_comp_my_100m-l4-s2_static_202511/static.zarr",
+                      "variables": [
+                        {
+                          "short_name": "Quality_indicator",
+                          "standard_name": "quality_flag",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": [
+                            {
+                              "coordinate_id": "latitude",
+                              "coordinate_unit": "degrees_north",
+                              "minimum_value": -89.99947916666666,
+                              "maximum_value": 89.99947916654406,
+                              "step": 0.0010416666666659572,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "y"
+                            },
+                            {
+                              "coordinate_id": "longitude",
+                              "coordinate_unit": "degrees_east",
+                              "minimum_value": -179.99947916666667,
+                              "maximum_value": 179.99947916779914,
+                              "step": 0.0010416666666699435,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "x"
+                            }
+                          ]
+                        },
+                        {
+                          "short_name": "SDB_type",
+                          "standard_name": "SDB_methodology",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": [
+                            {
+                              "coordinate_id": "latitude",
+                              "coordinate_unit": "degrees_north",
+                              "minimum_value": -89.99947916666666,
+                              "maximum_value": 89.99947916654406,
+                              "step": 0.0010416666666659572,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "y"
+                            },
+                            {
+                              "coordinate_id": "longitude",
+                              "coordinate_unit": "degrees_east",
+                              "minimum_value": -179.99947916666667,
+                              "maximum_value": 179.99947916779914,
+                              "step": 0.0010416666666699435,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "x"
+                            }
+                          ]
+                        },
+                        {
+                          "short_name": "height",
+                          "standard_name": "height",
+                          "units": "m",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": [
+                            {
+                              "coordinate_id": "latitude",
+                              "coordinate_unit": "degrees_north",
+                              "minimum_value": -89.99947916666666,
+                              "maximum_value": 89.99947916654406,
+                              "step": 0.0010416666666659572,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "y"
+                            },
+                            {
+                              "coordinate_id": "longitude",
+                              "coordinate_unit": "degrees_east",
+                              "minimum_value": -179.99947916666667,
+                              "maximum_value": 179.99947916779914,
+                              "step": 0.0010416666666699435,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "x"
+                            }
+                          ]
+                        }
+                      ],
+                      "platforms_metadata": null,
+                      "arco_sparse_type": null
+                    },
+                    {
+                      "service_name": "wmts",
+                      "service_short_name": "wmts",
+                      "service_format": null,
+                      "uri": "https://wmts.marine.copernicus.eu/teroWmts/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_comp_my_100m-l4-s2_static_202511",
+                      "variables": [
+                        {
+                          "short_name": "Quality_indicator",
+                          "standard_name": "quality_flag",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "SDB_type",
+                          "standard_name": "SDB_methodology",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "height",
+                          "standard_name": "height",
+                          "units": "m",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        }
+                      ],
+                      "platforms_metadata": null,
+                      "arco_sparse_type": null
+                    }
+                  ],
+                  "retired_date": null,
+                  "released_date": "2025-11-25T13:00:00.000Z",
+                  "arco_updating_start_date": null,
+                  "arco_updated_date": "2025-11-06T18:03:12.889Z",
+                  "url_metadata": "https://s3.waw3-1.cloudferro.com/mdl-metadata/metadata/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_comp_my_100m-l4-s2_static_202511/dataset.stac.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataset_id": "cmems_obs-sdb_glo_phy_irte_my_100m-l4-s2_static",
+          "dataset_name": "Provision of global coastal bathymetry derived from Sentinel 2 observations",
+          "product_id": "BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001",
+          "digital_object_identifier": "10.48670/mds-00364",
+          "versions": [
+            {
+              "label": "202511",
+              "parts": [
+                {
+                  "name": "default",
+                  "services": [
+                    {
+                      "service_name": "static-arco",
+                      "service_short_name": "static-arco",
+                      "service_format": "zarr",
+                      "uri": "https://s3.waw3-1.cloudferro.com/mdl-arco-time-003/arco/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_irte_my_100m-l4-s2_static_202511/static.zarr",
+                      "variables": [
+                        {
+                          "short_name": "Quality_indicator",
+                          "standard_name": "quality_flag",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": [
+                            {
+                              "coordinate_id": "latitude",
+                              "coordinate_unit": "degrees_north",
+                              "minimum_value": -89.99947916666666,
+                              "maximum_value": 89.99947916654406,
+                              "step": 0.0010416666666659572,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "y"
+                            },
+                            {
+                              "coordinate_id": "longitude",
+                              "coordinate_unit": "degrees_east",
+                              "minimum_value": -179.99947916666667,
+                              "maximum_value": 179.99947916779914,
+                              "step": 0.0010416666666699435,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "x"
+                            }
+                          ]
+                        },
+                        {
+                          "short_name": "SDB_type",
+                          "standard_name": "SDB_methodology",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": [
+                            {
+                              "coordinate_id": "latitude",
+                              "coordinate_unit": "degrees_north",
+                              "minimum_value": -89.99947916666666,
+                              "maximum_value": 89.99947916654406,
+                              "step": 0.0010416666666659572,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "y"
+                            },
+                            {
+                              "coordinate_id": "longitude",
+                              "coordinate_unit": "degrees_east",
+                              "minimum_value": -179.99947916666667,
+                              "maximum_value": 179.99947916779914,
+                              "step": 0.0010416666666699435,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "x"
+                            }
+                          ]
+                        },
+                        {
+                          "short_name": "height",
+                          "standard_name": "height",
+                          "units": "m",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": [
+                            {
+                              "coordinate_id": "latitude",
+                              "coordinate_unit": "degrees_north",
+                              "minimum_value": -89.99947916666666,
+                              "maximum_value": 89.99947916654406,
+                              "step": 0.0010416666666659572,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "y"
+                            },
+                            {
+                              "coordinate_id": "longitude",
+                              "coordinate_unit": "degrees_east",
+                              "minimum_value": -179.99947916666667,
+                              "maximum_value": 179.99947916779914,
+                              "step": 0.0010416666666699435,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "x"
+                            }
+                          ]
+                        }
+                      ],
+                      "platforms_metadata": null,
+                      "arco_sparse_type": null
+                    },
+                    {
+                      "service_name": "wmts",
+                      "service_short_name": "wmts",
+                      "service_format": null,
+                      "uri": "https://wmts.marine.copernicus.eu/teroWmts/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_irte_my_100m-l4-s2_static_202511",
+                      "variables": [
+                        {
+                          "short_name": "Quality_indicator",
+                          "standard_name": "quality_flag",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "SDB_type",
+                          "standard_name": "SDB_methodology",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "height",
+                          "standard_name": "height",
+                          "units": "m",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        }
+                      ],
+                      "platforms_metadata": null,
+                      "arco_sparse_type": null
+                    },
+                    {
+                      "service_name": "original-files",
+                      "service_short_name": "files",
+                      "service_format": null,
+                      "uri": "https://s3.waw3-1.cloudferro.com/mdl-native-17/native/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_irte_my_100m-l4-s2_static_202511/cmems_obs-sdb_glo_phy-irte_my-oa-100m-l4-s2_static.nc",
+                      "variables": [
+                        {
+                          "short_name": "Quality_indicator",
+                          "standard_name": "quality_flag",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "SDB_type",
+                          "standard_name": "SDB_methodology",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "height",
+                          "standard_name": "height",
+                          "units": "m",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        }
+                      ],
+                      "platforms_metadata": null,
+                      "arco_sparse_type": null
+                    }
+                  ],
+                  "retired_date": null,
+                  "released_date": "2025-11-25T13:00:00.000Z",
+                  "arco_updating_start_date": null,
+                  "arco_updated_date": "2025-11-06T18:20:56.089Z",
+                  "url_metadata": "https://s3.waw3-1.cloudferro.com/mdl-metadata/metadata/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_irte_my_100m-l4-s2_static_202511/dataset.stac.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataset_id": "cmems_obs-sdb_glo_phy_it_my_100m-l4-s2_static",
+          "dataset_name": "Provision of global coastal bathymetry derived from Sentinel 2 observations",
+          "product_id": "BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001",
+          "digital_object_identifier": "10.48670/mds-00364",
+          "versions": [
+            {
+              "label": "202511",
+              "parts": [
+                {
+                  "name": "default",
+                  "services": [
+                    {
+                      "service_name": "original-files",
+                      "service_short_name": "files",
+                      "service_format": null,
+                      "uri": "https://s3.waw3-1.cloudferro.com/mdl-native-17/native/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_it_my_100m-l4-s2_static_202511/cmems_obs-sdb_glo_phy-it_my_oa-100m-l4-s2_static.nc",
+                      "variables": [
+                        {
+                          "short_name": "Quality_indicator",
+                          "standard_name": "quality_flag",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "SDB_type",
+                          "standard_name": "SDB_methodology",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "height",
+                          "standard_name": "height",
+                          "units": "m",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        }
+                      ],
+                      "platforms_metadata": null,
+                      "arco_sparse_type": null
+                    },
+                    {
+                      "service_name": "static-arco",
+                      "service_short_name": "static-arco",
+                      "service_format": "zarr",
+                      "uri": "https://s3.waw3-1.cloudferro.com/mdl-arco-time-003/arco/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_it_my_100m-l4-s2_static_202511/static.zarr",
+                      "variables": [
+                        {
+                          "short_name": "Quality_indicator",
+                          "standard_name": "quality_flag",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": [
+                            {
+                              "coordinate_id": "latitude",
+                              "coordinate_unit": "degrees_north",
+                              "minimum_value": -89.99947916666666,
+                              "maximum_value": 89.99947916654406,
+                              "step": 0.0010416666666659572,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "y"
+                            },
+                            {
+                              "coordinate_id": "longitude",
+                              "coordinate_unit": "degrees_east",
+                              "minimum_value": -179.99947916666667,
+                              "maximum_value": 179.99947916779914,
+                              "step": 0.0010416666666699435,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "x"
+                            }
+                          ]
+                        },
+                        {
+                          "short_name": "SDB_type",
+                          "standard_name": "SDB_methodology",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": [
+                            {
+                              "coordinate_id": "latitude",
+                              "coordinate_unit": "degrees_north",
+                              "minimum_value": -89.99947916666666,
+                              "maximum_value": 89.99947916654406,
+                              "step": 0.0010416666666659572,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "y"
+                            },
+                            {
+                              "coordinate_id": "longitude",
+                              "coordinate_unit": "degrees_east",
+                              "minimum_value": -179.99947916666667,
+                              "maximum_value": 179.99947916779914,
+                              "step": 0.0010416666666699435,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "x"
+                            }
+                          ]
+                        },
+                        {
+                          "short_name": "height",
+                          "standard_name": "height",
+                          "units": "m",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": [
+                            {
+                              "coordinate_id": "latitude",
+                              "coordinate_unit": "degrees_north",
+                              "minimum_value": -89.99947916666666,
+                              "maximum_value": 89.99947916654406,
+                              "step": 0.0010416666666659572,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "y"
+                            },
+                            {
+                              "coordinate_id": "longitude",
+                              "coordinate_unit": "degrees_east",
+                              "minimum_value": -179.99947916666667,
+                              "maximum_value": 179.99947916779914,
+                              "step": 0.0010416666666699435,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "x"
+                            }
+                          ]
+                        }
+                      ],
+                      "platforms_metadata": null,
+                      "arco_sparse_type": null
+                    },
+                    {
+                      "service_name": "wmts",
+                      "service_short_name": "wmts",
+                      "service_format": null,
+                      "uri": "https://wmts.marine.copernicus.eu/teroWmts/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_it_my_100m-l4-s2_static_202511",
+                      "variables": [
+                        {
+                          "short_name": "Quality_indicator",
+                          "standard_name": "quality_flag",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "SDB_type",
+                          "standard_name": "SDB_methodology",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "height",
+                          "standard_name": "height",
+                          "units": "m",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        }
+                      ],
+                      "platforms_metadata": null,
+                      "arco_sparse_type": null
+                    }
+                  ],
+                  "retired_date": null,
+                  "released_date": "2025-11-25T13:00:00.000Z",
+                  "arco_updating_start_date": null,
+                  "arco_updated_date": "2025-11-06T19:17:28.840Z",
+                  "url_metadata": "https://s3.waw3-1.cloudferro.com/mdl-metadata/metadata/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_it_my_100m-l4-s2_static_202511/dataset.stac.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataset_id": "cmems_obs-sdb_glo_phy_wk_my_100m-l4-s2_static",
+          "dataset_name": "Provision of global coastal bathymetry derived from Sentinel 2 observations",
+          "product_id": "BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001",
+          "digital_object_identifier": "10.48670/mds-00364",
+          "versions": [
+            {
+              "label": "202511",
+              "parts": [
+                {
+                  "name": "default",
+                  "services": [
+                    {
+                      "service_name": "static-arco",
+                      "service_short_name": "static-arco",
+                      "service_format": "zarr",
+                      "uri": "https://s3.waw3-1.cloudferro.com/mdl-arco-time-003/arco/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_wk_my_100m-l4-s2_static_202511/static.zarr",
+                      "variables": [
+                        {
+                          "short_name": "Quality_indicator",
+                          "standard_name": "quality_flag",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": [
+                            {
+                              "coordinate_id": "latitude",
+                              "coordinate_unit": "degrees_north",
+                              "minimum_value": -89.99947916666666,
+                              "maximum_value": 89.99947916654406,
+                              "step": 0.0010416666666659572,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "y"
+                            },
+                            {
+                              "coordinate_id": "longitude",
+                              "coordinate_unit": "degrees_east",
+                              "minimum_value": -179.99947916666667,
+                              "maximum_value": 179.99947916779914,
+                              "step": 0.0010416666666699435,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "x"
+                            }
+                          ]
+                        },
+                        {
+                          "short_name": "SDB_type",
+                          "standard_name": "SDB_methodology",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": [
+                            {
+                              "coordinate_id": "latitude",
+                              "coordinate_unit": "degrees_north",
+                              "minimum_value": -89.99947916666666,
+                              "maximum_value": 89.99947916654406,
+                              "step": 0.0010416666666659572,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "y"
+                            },
+                            {
+                              "coordinate_id": "longitude",
+                              "coordinate_unit": "degrees_east",
+                              "minimum_value": -179.99947916666667,
+                              "maximum_value": 179.99947916779914,
+                              "step": 0.0010416666666699435,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "x"
+                            }
+                          ]
+                        },
+                        {
+                          "short_name": "height",
+                          "standard_name": "height",
+                          "units": "m",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": [
+                            {
+                              "coordinate_id": "latitude",
+                              "coordinate_unit": "degrees_north",
+                              "minimum_value": -89.99947916666666,
+                              "maximum_value": 89.99947916654406,
+                              "step": 0.0010416666666659572,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "y"
+                            },
+                            {
+                              "coordinate_id": "longitude",
+                              "coordinate_unit": "degrees_east",
+                              "minimum_value": -179.99947916666667,
+                              "maximum_value": 179.99947916779914,
+                              "step": 0.0010416666666699435,
+                              "values": null,
+                              "chunking_length": 1024,
+                              "chunk_type": null,
+                              "chunk_reference_coordinate": null,
+                              "chunk_geometric_factor": null,
+                              "axis": "x"
+                            }
+                          ]
+                        }
+                      ],
+                      "platforms_metadata": null,
+                      "arco_sparse_type": null
+                    },
+                    {
+                      "service_name": "wmts",
+                      "service_short_name": "wmts",
+                      "service_format": null,
+                      "uri": "https://wmts.marine.copernicus.eu/teroWmts/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_wk_my_100m-l4-s2_static_202511",
+                      "variables": [
+                        {
+                          "short_name": "Quality_indicator",
+                          "standard_name": "quality_flag",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "SDB_type",
+                          "standard_name": "SDB_methodology",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "height",
+                          "standard_name": "height",
+                          "units": "m",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        }
+                      ],
+                      "platforms_metadata": null,
+                      "arco_sparse_type": null
+                    },
+                    {
+                      "service_name": "original-files",
+                      "service_short_name": "files",
+                      "service_format": null,
+                      "uri": "https://s3.waw3-1.cloudferro.com/mdl-native-17/native/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_wk_my_100m-l4-s2_static_202511/cmems_obs-sdb_glo_phy-wk_my-oa-100m-l4-s2_static.nc",
+                      "variables": [
+                        {
+                          "short_name": "Quality_indicator",
+                          "standard_name": "quality_flag",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "SDB_type",
+                          "standard_name": "SDB_methodology",
+                          "units": "",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        },
+                        {
+                          "short_name": "height",
+                          "standard_name": "height",
+                          "units": "m",
+                          "bbox": [
+                            -179.99947916666667,
+                            -89.99947916666666,
+                            179.99947916779914,
+                            89.99947916654406
+                          ],
+                          "coordinates": []
+                        }
+                      ],
+                      "platforms_metadata": null,
+                      "arco_sparse_type": null
+                    }
+                  ],
+                  "retired_date": null,
+                  "released_date": "2025-11-25T13:00:00.000Z",
+                  "arco_updating_start_date": null,
+                  "arco_updated_date": "2025-11-06T18:32:09.823Z",
+                  "url_metadata": "https://s3.waw3-1.cloudferro.com/mdl-metadata/metadata/BATHYMETRY_GLO_PHY_COASTAL_L4_MY_016_001/cmems_obs-sdb_glo_phy_wk_my_100m-l4-s2_static_202511/dataset.stac.json"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
