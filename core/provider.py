@@ -9,20 +9,48 @@ class ProviderError(Exception):
 
 def classify(exc):
     # Messages are examined locally for status classification, never exported.
-    context = getattr(exc, "__context__", None) or getattr(exc, "__cause__", None)
-    response = getattr(exc, "response", None) or getattr(context, "response", None)
-    status = getattr(response, "status_code", None)
-    name = type(exc).__name__.lower()
-    if status in (400, 401, 403):
+    chain = []
+    current = exc
+    while current and len(chain) < 10 and current not in chain:
+        chain.append(current)
+        current = getattr(current, "__context__", None) or getattr(current, "__cause__", None)
+
+    statuses = [getattr(getattr(e, "response", None), "status_code", None) for e in chain]
+    names = [type(e).__name__.lower() for e in chain]
+    messages = [str(e).lower() for e in chain]
+
+    if any(s in (400, 401, 403) for s in statuses):
         return "AUTH"
-    if any(v in name for v in ("credential", "unauthorized", "invalidusernameorpassword")):
+    if any(any(v in name for v in ("credential", "unauthorized", "invalidusernameorpassword")) for name in names):
         return "AUTH"
-    if "couldnotconnecttoauthentication" in name:
+    if any("couldnotconnecttoauthentication" in name for name in names):
         return "NETWORK"
-    if any(v in name for v in ("datasetnotfound", "datasetversionnotfound", "variablenotfound", "variablesnotfound")):
+    if any(any(v in name for v in ("datasetnotfound", "datasetversionnotfound", "variablenotfound", "variablesnotfound")) for name in names):
         return "SCHEMA"
-    if status in (408, 429, 500, 502, 503, 504) or any(v in name for v in ("timeout", "connection", "serverdisconnected")):
+
+    network_name_indicators = (
+        "timeout", "connection", "serverdisconnected", "gaierror", "maxretry",
+        "network", "connecterror", "readtimeout", "poolerror", "urlerror",
+        "httperror", "serviceunavailable", "socket", "sslerror"
+    )
+    network_msg_indicators = (
+        "connection", "timeout", "timed out", "getaddrinfo", "name resolution",
+        "unreachable", "disconnected", "offline", "reset by peer",
+        "refused", "no internet", "failed to establish a new connection",
+        "dns", "network is down", "no route to host"
+    )
+
+    if any(s in (408, 429, 500, 502, 503, 504) for s in statuses):
         return "NETWORK"
+    if any(any(k in name for k in network_name_indicators) for name in names):
+        return "NETWORK"
+    if any(any(k in msg for k in network_msg_indicators) for msg in messages):
+        return "NETWORK"
+    for e in chain:
+        if isinstance(e, (ConnectionError, TimeoutError)):
+            return "NETWORK"
+        if isinstance(e, OSError) and getattr(e, "errno", None) in (11001, 10051, 10053, 10054, 10060, 10061, 10065):
+            return "NETWORK"
     return "FAILED"
 
 def retry(operation, emit, key=None, attempts=3, sleep=time.sleep):

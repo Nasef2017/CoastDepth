@@ -1,3 +1,11 @@
+# 0.2.6 — 2026-10-26
+
+- **Fault-tolerant batch downloading**: When downloading multiple datasets (Optical RTE, Wave Kinematics, Intertidal), products lacking coverage or valid bathymetry values in the selected ROI are cleanly skipped rather than aborting the entire process. Available products are successfully exported and added to QGIS.
+- **Dedicated NODATA reporting**: If all requested datasets lack data in the target ROI, an explicit, user-friendly `NODATA` status is reported instead of a generic failure.
+- **Enhanced network and server diagnostics**: Expanded exception classification to accurately identify DNS lookup failures (`gaierror`), connection resets, socket timeouts, and remote gateway/service unavailabilities (HTTP 500/502/503/504) as `NETWORK` errors with clear guidance to check internet connectivity.
+- **Informative status logging**: GUI log and Processing Toolbox outputs now explicitly report which datasets were saved and which were skipped due to lack of local coverage.
+- **Updated documentation and metadata**: Refined plugin About description to clearly articulate core scientific capabilities, model sources, and batch resilience.
+
 # 0.2.5 — 2026-10-24
 
 - Public release prepared for QGIS Python Plugins Repository and GitHub publication.

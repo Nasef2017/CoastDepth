@@ -9,6 +9,10 @@ from .catalogue import select_variables
 from .provider import ProviderError
 from .security import scrub, SENSITIVE
 
+class NoDataError(ValueError):
+    """Raised when the subset contains no valid bathymetry values or no pixel centers in the ROI."""
+    pass
+
 def safe_attributes(attributes, secrets):
     # Preserve numeric scientific attributes (including arrays and dtypes).
     return {key: ("[redacted]" if SENSITIVE.search(str(key)) else
@@ -66,12 +70,12 @@ def export_subset(source, directory, polygon=None, formats=("netcdf", "geotiff")
             mask = geometry_mask([polygon], out_shape=(ds.sizes[y], ds.sizes[x]),
                                  transform=transform, invert=True, all_touched=False)
             if not mask.any():
-                raise ValueError("Polygon contains no pixel centers.")
+                raise NoDataError("Polygon contains no pixel centers.")
             mask_da = xr.DataArray(mask, dims=(y, x), coords={y: ds[y], x: ds[x]})
             for var in variables:
                 ds[var] = ds[var].where(mask_da)
         if not np.isfinite(ds[variables[0]].values).any():
-            raise ValueError("No bathymetry data in ROI.")
+            raise NoDataError("No bathymetry data in ROI.")
         if "netcdf" in formats:
             path = directory / "bathymetry.nc"
             encoding = {}

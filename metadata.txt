@@ -1,8 +1,8 @@
 [general]
 name=CoastDepth — Copernicus Marine SDB
 description=Processing Toolbox tools to download Copernicus Marine coastal satellite-derived bathymetry, with citations and provenance.
-about=Independent, unofficial Copernicus Marine downloader with polygon masking, QGIS authentication and provenance. Developed by Mohamed Aly Nasef; documentation and vibe coding by ChatGPT. Requires Python 3.10+ and separately installed copernicusmarine==2.4.0, numpy, xarray, netCDF4, rasterio and packaging in a private environment. A personal Copernicus Marine account is required. See bundled docs/INSTALL.md for OSGeo4W Shell installation instructions. Tested on Windows with QGIS 4.0.2. Data must not be used for navigation.
-version=0.2.5
+about=CoastDepth is an independent, open-source QGIS plugin for retrieving, masking, and processing coastal Satellite-Derived Bathymetry (SDB) (~100 m resolution) provided by the E.U. Copernicus Marine Service (CMEMS). It is an unofficial community tool that provides streamlined access to Copernicus coastal bathymetry datasets: Optical RTE physics-based inversion, Wave Kinematics, and Intertidal mapping. Features include precise polygon masking, fault-tolerant batch downloading with automatic skipping of unmapped areas, encrypted credentials via QGIS Authentication Manager, and export to analysis-ready GeoTIFF and CF-compliant NetCDF with full cryptographic provenance (SHA-256) and citations. Developed by Mohamed Aly Nasef; documentation and vibe coding by ChatGPT. Requires Python 3.10+ with copernicusmarine in an isolated environment.
+version=0.2.6
 qgisMinimumVersion=3.34
 qgisMaximumVersion=4.0.99
 author=Mohamed Aly Nasef
@@ -17,4 +17,5 @@ experimental=False
 deprecated=False
 hasProcessingProvider=True
 supportsQt6=True
-changelog=0.2.5: Initial public release with Processing Toolbox integration, Copernicus Marine SDB retrieval, encrypted authentication, NetCDF/GeoTIFF exports, and provenance tracking. Developed by Mohamed Aly Nasef; documentation and vibe coding by ChatGPT.
+changelog=0.2.6: Fault-tolerant multi-dataset downloading (automatically skips products with no data in ROI while preserving and exporting available products); explicit NODATA notifications; accurate network/DNS disconnection diagnostics; clearer dataset status reporting in GUI and Processing logs.
+    0.2.5: Initial public release with Processing Toolbox integration, Copernicus Marine SDB retrieval, encrypted authentication, NetCDF/GeoTIFF exports, and provenance tracking. Developed by Mohamed Aly Nasef; documentation and vibe coding by ChatGPT.

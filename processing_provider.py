@@ -114,6 +114,10 @@ class CoastDepthDownload(QgsProcessingAlgorithm):
         try:
             result, log_path = execute_worker(worker_python(), HERE / "worker.py", self._request,
                 self._credentials, feedback, self._timeout)
+            if result.get("skipped_datasets"):
+                from .core.catalogue import dataset_display_name
+                skipped_names = [dataset_display_name(k) for k in result["skipped_datasets"]]
+                feedback.pushInfo("Notice: Skipped datasets without data in ROI: " + ", ".join(skipped_names))
             sources = height_sources(self._request, result, self._request["run_id"])
             self._completed = (result, sources, log_path)
             return {"OUTPUT_FOLDER": self._request["output"], "RESULT_FOLDER": result["directory"],

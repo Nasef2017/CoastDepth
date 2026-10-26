@@ -40,7 +40,7 @@ def emit(code, progress=0, **kw):
 
 def run(request, provider_factory=MarineProvider):
     configure_runtime_dlls()
-    from coastdepth.core.raster import export_subset
+    from coastdepth.core.raster import export_subset, NoDataError
     from coastdepth.core.provenance import provenance, write_json
     username, password = request.pop("username", ""), request.pop("password", "")
     provider = provider_factory(username, password, emit)
@@ -64,6 +64,8 @@ def run(request, provider_factory=MarineProvider):
     try:
         relative_outputs = []
         netcdf_variables = {}
+        successful_datasets = []
+        skipped_datasets = []
         for index, key in enumerate(keys):
             directory = partial / DATASET_FOLDERS[key]
             directory.mkdir()
@@ -74,9 +76,19 @@ def run(request, provider_factory=MarineProvider):
             if not source.is_file():
                 raise ProviderError("SCHEMA")
             emit("processing", 10 + int((index + .65) * 80 / len(keys)), dataset=key)
-            paths = export_subset(source, directory, request.get("polygon"), formats,
-                {"product_doi": DOI, "dataset_id": DATASETS[key][1], "provenance": "provenance.json"},
-                secrets=(username, password))
+            try:
+                paths = export_subset(source, directory, request.get("polygon"), formats,
+                    {"product_doi": DOI, "dataset_id": DATASETS[key][1], "provenance": "provenance.json"},
+                    secrets=(username, password))
+            except NoDataError:
+                if source.is_file():
+                    source.unlink()
+                if directory.exists():
+                    shutil.rmtree(directory)
+                skipped_datasets.append(key)
+                emit("dataset_nodata", dataset=key)
+                continue
+
             info = provenance(source, catalogue, key, bounds, request.get("polygon"), response,
                               paths, (username, password))
             for path in paths:
@@ -85,12 +97,21 @@ def run(request, provider_factory=MarineProvider):
             write_json(directory / "provenance.json", info)
             source.unlink()
             relative_outputs.extend(str(p.relative_to(partial)) for p in paths)
+            successful_datasets.append(key)
+
+        if not successful_datasets:
+            raise ProviderError("NODATA")
+
         write_json(partial / "manifest.json", {"schema_version": 1, "run_id": run_id,
-                   "datasets": keys, "dataset_directories": {k: DATASET_FOLDERS[k] for k in keys},
-                   "outputs": relative_outputs, "netcdf_variables": netcdf_variables, "status": "complete"})
+                   "datasets": successful_datasets, "dataset_directories": {k: DATASET_FOLDERS[k] for k in successful_datasets},
+                   "outputs": relative_outputs, "netcdf_variables": netcdf_variables,
+                   "skipped_datasets": skipped_datasets, "status": "complete"})
         # Same filesystem rename: no completed directory before all datasets succeed.
         partial.rename(final)
-        emit("complete", 100, result={"directory": str(final), "outputs": relative_outputs, "netcdf_variables": netcdf_variables})
+        emit("complete", 100, result={"directory": str(final), "outputs": relative_outputs,
+                                      "netcdf_variables": netcdf_variables,
+                                      "datasets": successful_datasets,
+                                      "skipped_datasets": skipped_datasets})
     finally:
         if partial.exists():
             shutil.rmtree(partial)

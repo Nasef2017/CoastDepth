@@ -75,7 +75,7 @@ def execute_worker(python, worker, request, credentials, feedback, timeout_minut
                 raise WorkerFailure("FAILED", log_path) from None
             feedback.setProgress(max(feedback.progress(), clean["progress"]))
             feedback.pushInfo(clean["message"])
-            if clean["code"] in ("AUTH", "NETWORK", "SCHEMA", "DEPENDENCY", "FAILED"):
+            if clean["code"] in ("AUTH", "NETWORK", "SCHEMA", "DEPENDENCY", "NODATA", "FAILED"):
                 last_error = clean["code"]
             if clean["code"] == "complete":
                 complete = value.get("result")

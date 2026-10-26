@@ -403,10 +403,13 @@ class FetchDialog(QDialog):
         if self.cancelled:
             self.append(event("cancelled"))
         elif code == 0 and self.result:
+            if self.result.get("skipped_datasets"):
+                skipped_names = [dataset_display_name(k) for k in self.result["skipped_datasets"]]
+                self.log_view.appendPlainText("Notice: Skipped datasets without data in ROI: " + ", ".join(skipped_names))
             if self.add_layers.isChecked():
                 self.load_results()
             self.retry_button.setEnabled(False)
-        elif not self.log.records or self.log.records[-1]["code"] not in ("AUTH", "NETWORK", "DEPENDENCY", "SCHEMA", "FAILED"):
+        elif not self.log.records or self.log.records[-1]["code"] not in ("AUTH", "NETWORK", "DEPENDENCY", "SCHEMA", "NODATA", "FAILED"):
             self.append(event("FAILED"))
         # Safe, structured log is saved for success, cancellation and failure.
         try:
