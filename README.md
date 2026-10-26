@@ -69,7 +69,7 @@ When reporting a problem, include the plugin version, QGIS version, operating sy
 ## Development & Credits
 
 - **Developed by:** Mohamed Aly Nasef ([eng.m.nasef2017@gmail.com](mailto:eng.m.nasef2017@gmail.com))
-- **AI Assistance:** Documentation and vibe coding by ChatGPT.
+- **AI Assistance:** Documentation and vibe coding by ChatGPT and Gemini.
 
 ## Licence
 
